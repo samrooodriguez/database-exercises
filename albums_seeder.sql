@@ -1,7 +1,6 @@
 USE codeup_test_db;
-
+TRUNCATE albums;
 --insert into /tableName/ (field1, field2...) values ('value1', 'value2'...);
-
 
 insert into albums (artist, name, release_date, genre, sales) values
  ('Michael Jackson','Thriller',1982,'Pop',47.3),
