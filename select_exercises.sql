@@ -1,3 +1,4 @@
+--for this exercise I wasn't sure if we were supposed to do: SELECT 'random output' AS 'whateverYouWant'; - will refactor if necessary
 USE codeup_test_db;
 --SELECT column1, column2, ...
 --FROM table_name
