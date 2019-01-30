@@ -15,7 +15,7 @@ ON e.emp_no = dm.emp_no
 -- making sure that they are currently active
 where dm.to_date = '9999-01-01';
 
--- -------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 -- setting the table row names as the correct name
 SELECT dept_name as 'Department Name', concat(first_name, ' ', last_name) as Manager_Name
