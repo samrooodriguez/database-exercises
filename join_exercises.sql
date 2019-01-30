@@ -69,13 +69,24 @@ JOIN salaries as s
 
 ON s.emp_no = dm.emp_no
 
-where s.to_date = '9999-01-01' and dm.to_date = '9999-01-01'
+WHERE s.to_date = '9999-01-01' AND dm.to_date = '9999-01-01'
 
-group by Department_Name, Manager_Name, Salary;
+GROUP BY Department_Name, Manager_Name, Salary;
 
 ---------------------------------------------------------------------------------------------------
 
--- Employee Name | Department Name  |  Manager Name
---     --------------|------------------|-----------------
---      Huan Lortz   | Customer Service | Yuchang Weedman
+SELECT concat(first_name, ' ', last_name) as Employee_Name, dept_name as Department_Name, concat(first_name, ' ', last_name) as Manager_Name
 
+FROM departments as d
+
+JOIN dept_manager as dm
+
+ON dm.dept_no = d.dept_no
+
+JOIN employees as e
+
+ON e.emp_no = dm.emp_no
+
+WHERE dm.to_date = '9999-01-01'
+
+GROUP BY Employee_Name, Department_Name, Manager_Name;
